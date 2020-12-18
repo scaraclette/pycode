@@ -1,0 +1,21 @@
+Things to know:
+
+1. Node
+2. Edge
+3. Root
+4. Path
+5. Children
+6. Parent
+7. Sibling
+8. Subtree
+9. Leaf node: node without children
+10. Level
+12. Height
+
+                rootnode
+        child1 (c1) | child2 (c2)
+            /               \
+        node1 (n1)        node2 (n2)
+       c1 | c2 | c3          c1
+       /    |     \           |
+      n3    n4    n5         n6
