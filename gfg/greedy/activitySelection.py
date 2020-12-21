@@ -9,11 +9,24 @@ def activitySelection(start, finish):
     for i in range(len(start)):
         intervals.append((start[i], finish[i]))
 
-    print(intervals)
+    indexDict = {i: x for x, i in enumerate(intervals)}
+    print(indexDict[(1,2)])
 
-    result = []
+    print(indexDict)
+
+    result = [intervals[0]]
+    for i in range(1, len(intervals)):
+        prevFinish = result[-1][1]
+        currentStart = intervals[i][0]
+        if currentStart >= prevFinish:
+            result.append(intervals[i])
     
+    for i in result:
+        print(indexDict[i])
 
 def main():
-    start = [10,12,20]
-    finish = [20,25,30]
+    start = [1, 3, 0, 5, 8, 5]
+    finish = [2, 4, 6, 7, 9, 9]
+    activitySelection(start, finish)
+
+main()
